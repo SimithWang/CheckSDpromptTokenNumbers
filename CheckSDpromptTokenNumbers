@@ -1,0 +1,11 @@
+from transformers import CLIPTokenizer
+# 加载预训练的 tokenizer
+tokenizer = CLIPTokenizer.from_pretrained("openai/clip-vit-base-patch32")
+# 输入文本
+text = "This is an example sentence for tokenization."
+# 对文本进行 tokenization
+tokens = tokenizer.tokenize(text)
+# 获取 token 的长度
+token_length = len(tokens)
+print(f"Tokenized text: {tokens}")
+print(f"Number of tokens: {token_length}")
